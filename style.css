@@ -1,0 +1,248 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.5)), url('./src/doctor-image.jpeg') no-repeat center center/cover;
+    height: 100vh;
+    color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 0;
+}
+.hero h1, .hero p {
+    position: relative;
+    z-index: 1;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+.hero h1 { font-size: 3rem; }
+.hero p { font-size: 1.5rem; }
+.name{
+    margin-bottom: 0px;
+    color: rgb(179, 220, 247);
+    text-shadow: 5px 5px 100px black;
+    font-size: 5vw !important;
+    font-weight: 700;
+    position: relative;
+    z-index: 1;
+    padding-bottom: 0px;
+}
+.intro1{
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: rgb(91, 217, 249);
+    text-shadow: 5px 5px 100px black;
+    align-items: flex-end;
+    position: relative;
+    font-size: 2.2vw !important;
+    z-index: 1;
+}
+.intro2{
+    padding-top: 0px;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    color: rgb(243, 216, 216);
+    text-shadow: 5px 5px 100px black;
+    position: relative;
+    font-size: 2vw !important;
+    z-index: 1;
+}
+.btn {
+    background: #007bff;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-top: 40px;
+    position: relative;
+    z-index: 1;
+
+	border-radius: 4px;
+	outline: none;
+	text-transform: uppercase;
+	text-decoration: none;
+	font-weight: 700;
+	letter-spacing: 1px;
+	transition: all 2s ease;
+}
+.btn:hover{
+	background:#ffff00;
+	color: #0000a0;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0,0,0,0.5);
+    width: 90%;
+    max-width: 1200px;
+    height: 90vh;
+    z-index: 10000;
+}
+.popup iframe { 
+    width: 100%; 
+    height: 100%; 
+    border: none; 
+    background: white;        
+}
+.close { 
+    cursor: pointer;
+    color: red;
+    float: right;
+    font-size: 30px; 
+}
+.stories {
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.story-card {
+    background: #f8f8f8;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+    flex: 1;
+    min-width: 250px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.about-head{
+    font-size: 2.2vw;
+    font-weight: 780;
+    color: #50287c;
+    text-align: left !important;
+    margin-left: 10%;
+}
+
+li {
+    font-size: 1.6vw;
+    text-align: left !important;
+    font-weight: 780;
+    color: rgb(145, 41, 3);
+    margin-left: 10%;
+}
+
+.full-story-card {
+    text-align: left;
+}
+
+.story-preview {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.full-story {
+    display: none;
+    margin-top: 10px;
+}
+
+.read-more {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .story-card {
+        width: 90%;
+    }
+}
+
+.animation::after{
+	content: 'Comprehensive homeopathic consultation';
+	animation: yourAnimation 10s ease infinite normal none;
+	color: #049074;
+    font-size: 2.8vw;
+    text-shadow: 1px 1px rgb(73, 2, 2);
+}
+
+@keyframes yourAnimation{
+	0% {content: "Comprehensive homeopathic consultation";}
+	20% {content: "Personalized treatment plans";}
+	40% {content: "Dietary and lifestyle advice";}
+	60% {content: "Women's health issues";}
+	80% {content: "Follow-up consultations";}
+}
+
+@media (max-width: 768px) {
+    .hero {
+        width: 100%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .popup{
+        width: 100% !important;
+    }
+    .name {
+        font-size: 12vw !important; 
+        margin-bottom: 8px;
+    }
+    .intro1 {
+        font-size: 8vw !important; /* Reduce text size for better fit */
+    }
+    .intro2 {
+        font-size: 6vw !important; 
+        margin-left: 6vw;
+        margin-right: 6vw;
+    }
+    .doc-section {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .doc-image {
+        margin-left: 0 !important;  /* Remove margin */
+        width: 100%;  /* Ensure full width */
+        display: flex;
+        justify-content: center;
+    }
+    .doc-image img {
+        width: 100vw !important; /* Full width */
+        height: auto;
+    }
+    .doc-section div {
+        width: 100%;
+        margin-bottom: 10vw;
+    }
+    li {
+        font-size: 4vw;
+    }
+    .about-head{
+        font-size: 5vw;
+    }
+    .animation::after {
+        font-size: 6vw;
+    }
+}
+
+
+.footer { background: #333; color: white; padding: 20px; margin-top: 50px; }

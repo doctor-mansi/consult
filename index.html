@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consult Dr. Mansi Jadon</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <div class="hero">
+        <h1 class="name">Dr. Mansi Jadon</h1>
+        <p class="intro1">( BHMS )</p><br>
+        <p class="intro2">A distinguished homeopathic practitioner from <br>
+            <strong style="color: rgb(211, 249, 239);">State KGK Homeopathic Medical College and Hospital, Moradabad.</strong> <br> 
+            now offers convenient online consultations.<br><br>
+            Experience expert homeopathic care from the comfort of your home,<br> 
+            backed by her extensive knowledge and clinical expertise.</p>
+        <button class="btn" onclick="openPopup()">Consult now</button>
+    </div>
+    
+    <div class="popup" id="popup">
+        <span class="close" onclick="closePopup()">&times;</span>
+        <iframe src="https://forms.gle/Uj1LEHNHz5mYyhw28"></iframe>
+    </div>
+    <div class="doc-section" style="display: flex; background-color: rgb(216, 216, 249); justify-content: space-between;">
+        <div class="doc-image" style="margin-left: 6vw;">
+            <img src="./src/doc-img.jpeg" style="display: block; height: 70vh; width: auto;">
+        </div>
+        <div style="text-align: center; width: 70vw;">
+            <h2 style="text-align: center;"><span class="animation"> </span></h2>
+            <h2 class="about-head">Services Offered :</h2>
+            <li>Tailored treatment plans to address your specific health concerns</li>
+            <li>Confidential online consultations</li>
+            <br>
+            <h2 class="about-head">Treatments :</h2>
+            <li>Respiratory ailments (asthma, allergies, etc.)</li>
+            <li>Skin Conditions (eczema, psoriasis)</li>
+            <li>Stress and anxiety</li>
+            <li>And many more</li>
+        </div>
+    </div>
+    <h2 class="intro1" style="margin-top: 20px; color: rgb(84, 18, 146);">Success Stories</h2>
+    <div class="stories">
+        <div class="story-card full-story-card">
+            <strong style="color: rgb(68, 9, 123);">A Young Patient's Triumph Over Skin Ailments</strong>
+            <p class="story-preview">
+                A 13-year-old male presented to the clinic with white spots on his face and skin eruptions...
+            </p>
+            <p class="full-story">
+                A 13-year-old male presented to the clinic with a concerning array of dermatological issues. For the past week, 
+                he had developed noticeable white spots on his face, accompanied by an eruption of lesions across his hands and trunk. 
+                Adding to these recent complaints was a persistent, palpable knot behind his left ear, which had been present for 
+                3-4 years. A thorough physical examination was conducted, leading to a targeted treatment plan. Within a week, 
+                the patient showed remarkable improvement. His white spots faded, skin eruptions resolved, and the knot 
+                behind his ear started reducing in size.
+            </p>
+            <button class="read-more" onclick="toggleStory(this)">Read More</button>
+        </div>
+    
+        <div class="story-card full-story-card">
+            <strong style="color: rgb(68, 9, 123);">A Transformation: Overcoming Pigmentation, Hair Loss, and Emotional Distress</strong>
+            <p class="story-preview">
+                A 50-year-old female experienced pigmentation, hair loss, and headaches for years...
+            </p>
+            <p class="full-story">
+                On December 14th, 2024, a 50-year-old female presented with a complex constellation of symptoms. She had 
+                pigmentation on her forehead, cheeks, and nose, along with hair loss, headaches, and allergies. A holistic approach 
+                was adopted, addressing both physical and emotional concerns. Within a week, her mental state improved, 
+                headaches subsided, and pigmentation started fading. Over three months, she experienced significant healing, 
+                with reduced pigmentation, stabilized hair loss, and complete resolution of her headaches.
+            </p>
+            <button class="read-more" onclick="toggleStory(this)">Read More</button>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>Contact: <i class="fa fa-envelope"></i> mansithakurneet059@gmail.com</p>
+    </div>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
